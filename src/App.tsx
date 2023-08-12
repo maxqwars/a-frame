@@ -3,16 +3,23 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 import { Provider } from 'react-redux';
 
-/* Mizuhiki */
+/* Views */
+import AnnounceView from '@/views/AnnounceView';
+import HomeView from '@/views/HomeView';
+
+/* Addons */
 import i18n from '@/i18n';
-import Home from '@/views/Home';
 import store from '@/store/store';
 
 /* Create router */
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <AnnounceView />,
+  },
+  {
+    path: '/home',
+    element: <HomeView />,
   },
 ]);
 

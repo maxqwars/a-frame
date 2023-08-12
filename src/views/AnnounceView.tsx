@@ -1,6 +1,6 @@
 import Announce from '@/components/Announce';
 
-const Home = () => {
+const AnnounceView = () => {
   return (
     <div>
       <Announce />
@@ -8,4 +8,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default AnnounceView;
