@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import styles from './Announce.module.css';
 
+import Typography from '@/components/UI/Typography';
+
 import DiscordIcon from '@/assets/discord-6.svg';
 import GitHubIcon from '@/assets/github-icon-1.svg';
 import MizuhikiLogo from '@/assets/mizuhiki-logo.svg';
@@ -15,8 +17,11 @@ const Announce = () => {
           <img className={styles['announce__app-logo']} src={MizuhikiLogo} alt="" />
         </div>
 
-        <h1 className={styles['announce__app-name']}>{t('announce_app-name')}</h1>
-        <h2 className={styles.announce__subtitle}>{t('announce_subtitle')}</h2>
+        <Typography align="center" variant="h3">
+          {t('announce_app-name')}
+        </Typography>
+        <Typography variant='subtitle1'>{t('announce_subtitle')}</Typography>
+
         <div className={styles.announce__icons}>
           <a className={styles['announce__icon-link']} href="/">
             <img className={styles.announce__icon} src={DiscordIcon} alt="" />
