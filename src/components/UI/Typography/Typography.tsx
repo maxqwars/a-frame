@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, createElement } from 'react';
 import cn from 'classnames';
 import './Typography.css';
 
@@ -24,20 +24,12 @@ type TypographyProps = {
 };
 
 const Typography = ({ variant = 'body1', align = 'inherit', children, color = 'text' }: TypographyProps) => {
-  const Component = variant ? variantsMapping[variant] : 'p';
+  const className = cn({
+    [`typography--variant-${variant}`]: variant,
+    [`typography--color-${color}`]: color,
+  });
 
-  // FIXME: Property 'children' does not exist on type 'IntrinsicAttributes'.ts(2322)
-  return (
-    <Component
-      className={cn({
-        [`typography--variant-${variant}`]: variant,
-        [`typography--color-${color}`]: color,
-      })}
-      align={align}
-    >
-      {children}
-    </Component>
-  );
+  return createElement(variant ? variantsMapping[variant] : 'p', { align, className }, children);
 };
 
 export default Typography;
