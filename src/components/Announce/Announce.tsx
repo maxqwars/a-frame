@@ -20,7 +20,9 @@ const Announce = () => {
         <Typography align="center" variant="h3">
           {t('announce_app-name')}
         </Typography>
-        <Typography variant='subtitle1'>{t('announce_subtitle')}</Typography>
+        <Typography align="center" variant="subtitle1">
+          {t('announce_subtitle')}
+        </Typography>
 
         <div className={styles.announce__icons}>
           <a className={styles['announce__icon-link']} href="/">

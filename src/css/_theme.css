@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+:root {
+  /* Shared */
+  --mdc-typography--font-family: 'Inter';
+  --mdc-shape-small: 4px;
+  --mdc-shape-medium: 4px;
+  --mdc-shape-large: 0px;
+
+  /* Light theme */
+  --mdc-theme-primary: #6200ee;
+  --mdc-theme-on-primary: #ffffff;
+  --mdc-theme-secondary: #018786;
+  --mdc-theme-on-secondary: #ffffff;
+  --mdc-theme-error: #b00020;
+  --mdc-theme-on-error: #ffffff;
+  --mdc-theme-surface: #ffffff;
+  --mdc-theme-on-surface: #000000;
+  --mdc-theme-background: #ffffff;
+
+  /* Dark theme */
+  --mdc-theme-primary-dark: #6200ee;
+  --mdc-theme-on-primary-dark: #ffffff;
+  --mdc-theme-secondary-dark: #018786;
+  --mdc-theme-on-secondary-dark: #ffffff;
+  --mdc-theme-error-dark: #b00020;
+  --mdc-theme-on-error-dark: #ffffff;
+  --mdc-theme-surface-dark: #ffffff;
+  --mdc-theme-on-surface-dark: #000000;
+  --mdc-theme-background-dark: #ffffff;
+}

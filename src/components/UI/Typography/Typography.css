@@ -47,14 +47,14 @@
 }
 
 .typography--color-primary {
-  color: var(--color-primary);
+  color: var(--mdc-theme-primary);
 }
 
 .typography--color-text {
-  color: var(--color-text);
+  color: var(--mdc-theme-on-surface);
 }
 
 
 .typography--color-error {
-  color: #eb5757;
+  color: var(--mdc-theme-error);
 }
