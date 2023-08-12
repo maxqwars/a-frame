@@ -11,7 +11,6 @@ i18n
   .init({
     fallbackLng: 'en',
     debug: true,
-
     interpolation: {
       escapeValue: false, // react already safes from xss
     },
