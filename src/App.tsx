@@ -28,9 +28,10 @@ function App() {
   const browserTheme = useBrowserTheme();
   const appTheme = useAppSelector((state) => state.appConfigReducer.theme);
   const { t } = useTranslation();
-  const [setTitle] = useBrowserControls();
+  const { setBodyTheme, setDocumentTitle } = useBrowserControls();
 
-  setTitle(`${t('announce_app-name')} | ${t('announce_subtitle')}`);
+  setDocumentTitle(`${t('announce_app-name')} | ${t('announce_subtitle')}`);
+  setBodyTheme(appTheme === 'system' ? browserTheme : appTheme);
 
   return (
     <ThemeContext.Provider value={appTheme === 'system' ? browserTheme : appTheme}>

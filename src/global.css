@@ -8,3 +8,17 @@
 body {
   background: var(--mdc-theme-background);
 }
+
+body.dark {
+  background-color: var(--mdc-theme-background-dark);
+}
+
+body.light {
+  background-color: var(--mdc-theme-background);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--mdc-theme-background-dark);
+  }
+}
