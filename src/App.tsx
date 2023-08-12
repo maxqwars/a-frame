@@ -1,21 +1,16 @@
 /* External modules */
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { I18nextProvider } from 'react-i18next';
-import { Provider } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+
+/* Addons */
+import useBrowserTheme from '@/hooks/useBrowserTheme';
+import useBrowserControls from '@/hooks/useBrowserControls';
+import { useAppSelector } from '@/store/hooks';
+import { ThemeContext } from '@/context/ThemeContext';
 
 /* Views */
 import AnnounceView from '@/views/AnnounceView';
 import HomeView from '@/views/HomeView';
-
-/* Addons */
-import initI18n from '@/i18n';
-import store from '@/store/store';
-import { appConfigModel } from '@/models/AppConfigModel';
-
-/* Set language */
-const i18n = initI18n(
-  appConfigModel.language === 'system' ? undefined : (appConfigModel.userSelectedLanguage as string),
-);
 
 /* Create router */
 const router = createBrowserRouter([
@@ -30,12 +25,17 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const browserTheme = useBrowserTheme();
+  const appTheme = useAppSelector((state) => state.appConfigReducer.theme);
+  const { t } = useTranslation();
+  const [setTitle] = useBrowserControls();
+
+  setTitle(`${t('announce_app-name')} | ${t('announce_subtitle')}`);
+
   return (
-    <Provider store={store}>
-      <I18nextProvider i18n={i18n}>
-        <RouterProvider router={router} />
-      </I18nextProvider>
-    </Provider>
+    <ThemeContext.Provider value={appTheme === 'system' ? browserTheme : appTheme}>
+      <RouterProvider router={router} />
+    </ThemeContext.Provider>
   );
 }
 

@@ -1,11 +1,9 @@
 // eslint-disable-next-line import/named
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { AppConfigType } from '@/types/AppConfigType';
+import { DEF_APP_CONF } from '@/constants/DEF_APP_CONF';
 
-const initialState = {
-  theme: 'system',
-  language: 'system',
-} as AppConfigType;
+const initialState = DEF_APP_CONF;
 
 const appConfig = createSlice({
   name: 'appConfig',
@@ -18,7 +16,13 @@ const appConfig = createSlice({
       state.language = action.payload;
     },
     setConfig(state: AppConfigType, action: PayloadAction<AppConfigType>) {
-      state = action.payload;
+      const { theme, language, userApiServerUrl, userSelectedLanguage, apiServerUrl } = action.payload;
+
+      state.theme = theme;
+      state.language = language;
+      state.userApiServerUrl = userApiServerUrl;
+      state.userSelectedLanguage = userSelectedLanguage;
+      state.apiServerUrl = apiServerUrl;
     },
   },
 });
