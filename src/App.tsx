@@ -8,9 +8,14 @@ import AnnounceView from '@/views/AnnounceView';
 import HomeView from '@/views/HomeView';
 
 /* Addons */
-import i18n from '@/i18n';
+import initI18n from '@/i18n';
 import store from '@/store/store';
 import { appConfigModel } from '@/models/AppConfigModel';
+
+/* Set language */
+const i18n = initI18n(
+  appConfigModel.language === 'system' ? undefined : (appConfigModel.userSelectedLanguage as string),
+);
 
 /* Create router */
 const router = createBrowserRouter([
@@ -25,8 +30,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  console.log(appConfigModel.raw());
-
   return (
     <Provider store={store}>
       <I18nextProvider i18n={i18n}>
