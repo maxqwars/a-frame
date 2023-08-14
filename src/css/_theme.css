@@ -29,3 +29,60 @@
   --mdc-theme-on-surface-dark: #ffffff;
   --mdc-theme-background-dark: #000000;
 }
+
+/* 
+* New UI / V2
+*/
+:root {
+
+  /* Typography */
+
+  /* Font family */
+  --typography-font-family: 'Inter';
+
+  /* Headlines */
+  --typography-headline-1: ;
+  --typography-headline-2: ;
+  --typography-headline-3: ;
+  --typography-headline-4: ;
+  --typography-headline-5: ;
+  --typography-headline-6: ;
+
+  /* Subtitles */
+  --typography-subtitle-1: ;
+  --typography-subtitle-2: ;
+
+  /* Paragraphs */
+  --typography-body-1: ;
+  --typography-body-2: ;
+
+  /* UI */
+  --typography-button: ;
+  --typography-caption: ;
+  --typography-overline: ;
+
+  /* Typography END */
+
+  /* Palette */
+
+  --accent-color: ;
+  --success-color: ;
+  --surface-color: ;
+
+  /* Palette END */
+
+
+  /* Shadows */
+
+  /* Shadows END */
+
+
+  /* Shapes */
+
+  --shape-small: 2px;
+  --shape-medium: 5px;
+  --shape-heavy: 10px;
+
+  /* Shapes END */
+
+}
