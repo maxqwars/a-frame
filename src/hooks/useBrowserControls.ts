@@ -6,11 +6,13 @@ export default function useBrowserControls() {
     setBodyTheme(theme: 'light' | 'dark' | 'system') {
       switch (theme) {
         case 'light':
-          document.body.classList.add('light');
+          document.body.classList.remove('dark-body');
+          document.body.classList.add('light-body');
           break;
 
         case 'dark':
-          document.body.classList.add('dark');
+          document.body.classList.remove('light-body');
+          document.body.classList.add('dark-body');
           break;
 
         case 'system': {
