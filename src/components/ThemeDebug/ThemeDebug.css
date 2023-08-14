@@ -2,6 +2,8 @@
 
 .theme-debug {
   margin: 10px;
+  padding: 10px;
+  border-radius: var(--mdc-shape-medium);
 }
 
 .theme-debug--theme-light {
@@ -12,4 +14,66 @@
 .theme-debug--theme-dark {
   background: var(--mdc-theme-surface-dark) !important;
   color: var(--mdc-theme-on-surface-dark) !important;
+}
+
+.theme-debug__color-table {
+  border: 1px solid #e2e2e2;
+  padding: 5px;
+}
+
+.theme-debug__color-table td {
+  padding: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.theme-debug__primary-color--theme-light {
+  background: var(--mdc-theme-primary);
+  color: var(--mdc-theme-on-primary);
+}
+
+.theme-debug__primary-color--theme-dark {
+  background: var(--mdc-theme-primary-dark);
+  color: var(--mdc-theme-on-primary-dark);
+}
+
+.theme-debug__secondary-color--theme-light {
+  background: var(--mdc-theme-secondary);
+  color: var(--mdc-theme-on-secondary);
+}
+
+.theme-debug__secondary-color--theme-dark {
+  background: var(--mdc-theme-secondary-dark);
+  color: var(--mdc-theme-on-secondary-dark);
+}
+
+.theme-debug__background--color-theme-light {
+  background: var(--mdc-theme-background);
+  color: var(--mdc-theme-on-surface)
+}
+
+.theme-debug__background--color-theme-dark {
+  background: var(--mdc-theme-background-dark);
+  color: var(--mdc-theme-on-surface-dark)
+}
+
+.theme-debug__surface--color-theme-light {
+  background: var(--mdc-theme-surface);
+  color: var(--mdc-theme-on-surface)
+}
+
+.theme-debug__surface--color-theme-dark {
+  background: var(--mdc-theme-surface-dark);
+  color: var(--mdc-theme-on-surface-dark)
+}
+
+.theme-debug__error--color-theme-light {
+  background: var(--mdc-theme-error);
+  color: var(--mdc-theme-on-error)
+}
+
+.theme-debug__error--color-theme-dark {
+  background: var(--mdc-theme-error-dark);
+  color: var(--mdc-theme-on-error-dark)
 }

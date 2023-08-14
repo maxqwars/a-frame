@@ -8,14 +8,14 @@
   --mdc-shape-large: 0px;
 
   /* Light theme */
-  --mdc-theme-primary: #6200ee;
-  --mdc-theme-on-primary: #ffffff;
+  --mdc-theme-primary: #4f6d7a;
+  --mdc-theme-on-primary: #2a2d34;
   --mdc-theme-secondary: #018786;
   --mdc-theme-on-secondary: #ffffff;
   --mdc-theme-error: #b00020;
   --mdc-theme-on-error: #ffffff;
-  --mdc-theme-surface: #ffffff;
-  --mdc-theme-on-surface: #000000;
+  --mdc-theme-surface: #eaeaea;
+  --mdc-theme-on-surface: #2a2d34;
   --mdc-theme-background: #ffffff;
 
   /* Dark theme */
