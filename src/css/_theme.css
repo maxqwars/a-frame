@@ -25,7 +25,7 @@
   --mdc-theme-on-secondary-dark: #ffffff;
   --mdc-theme-error-dark: #b00020;
   --mdc-theme-on-error-dark: #ffffff;
-  --mdc-theme-surface-dark: #ffffff;
+  --mdc-theme-surface-dark: #000000;
   --mdc-theme-on-surface-dark: #ffffff;
   --mdc-theme-background-dark: #000000;
 }

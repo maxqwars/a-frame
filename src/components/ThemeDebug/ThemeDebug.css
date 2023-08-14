@@ -1,0 +1,15 @@
+@import '../../css/_theme.css';
+
+.theme-debug {
+  margin: 10px;
+}
+
+.theme-debug--theme-light {
+  background: var(--mdc-theme-surface);
+  color: var(--mdc-theme-on-surface);
+}
+
+.theme-debug--theme-dark {
+  background: var(--mdc-theme-surface-dark) !important;
+  color: var(--mdc-theme-on-surface-dark) !important;
+}

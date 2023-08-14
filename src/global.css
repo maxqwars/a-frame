@@ -10,23 +10,13 @@ body {
 }
 
 * {
-  color: var(--mdc-theme-on-surface);
+  color: inherit;
 }
 
-body.dark {
-  background-color: var(--mdc-theme-background-dark);
+.dark-body {
+  background-color: var(--mdc-theme-background-dark) !important;
 }
 
-body.light {
-  background-color: var(--mdc-theme-background);
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--mdc-theme-background-dark);
-  }
-
-  * {
-    color: var(--mdc-theme-on-surface-dark);
-  }
+body.light-body {
+  background-color: var(--mdc-theme-background) !important;
 }

@@ -11,6 +11,7 @@ import { ThemeContext } from '@/context/ThemeContext';
 /* Views */
 import AnnounceView from '@/views/AnnounceView';
 import HomeView from '@/views/HomeView';
+import DebugView from '@/views/DebugView';
 
 /* Create router */
 const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     path: '/home',
     element: <HomeView />,
   },
+  {
+    path: '/debug',
+    element: <DebugView />,
+  },
 ]);
 
 function App() {
@@ -30,8 +35,9 @@ function App() {
   const { t } = useTranslation();
   const { setBodyTheme, setDocumentTitle } = useBrowserControls();
 
+  /* Prepare browser */
   setDocumentTitle(`${t('announce_app-name')} | ${t('announce_subtitle')}`);
-  setBodyTheme(appTheme === 'system' ? browserTheme : appTheme);
+  setBodyTheme(appTheme === 'system' ? browserTheme : appTheme); // Define UI theme
 
   return (
     <ThemeContext.Provider value={appTheme === 'system' ? browserTheme : appTheme}>
