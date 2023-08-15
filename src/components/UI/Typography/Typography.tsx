@@ -1,5 +1,8 @@
-import { ReactNode, createElement } from 'react';
+import { ReactNode, createElement, useContext } from 'react';
 import cn from 'classnames';
+
+import { ThemeContext } from '@/context/ThemeContext';
+
 import './Typography.css';
 
 /* Declare variants map */
@@ -24,9 +27,12 @@ type TypographyProps = {
 };
 
 const Typography = ({ variant = 'body1', align = 'inherit', children, color = 'text' }: TypographyProps) => {
+  const appTheme = useContext(ThemeContext);
+  const textColor = color === 'text' ? appTheme : color;
+
   const className = cn({
     [`typography--variant-${variant}`]: variant,
-    [`typography--color-${color}`]: color,
+    [`typography--color-${textColor}`]: textColor,
   });
 
   return createElement(variant ? variantsMapping[variant] : 'p', { align, className }, children);

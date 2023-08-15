@@ -1,60 +1,57 @@
+@import '../../../css/_theme.css';
+
 .typography--variant-h1 {
-  font-size: 6rem;
+  font-size: var(--typography-headline-1);
   font-weight: 500;
 }
 
 .typography--variant-h2 {
-  font-size: 3.75rem;
+  font-size: var(--typography-headline-2);
   font-weight: 500;
 }
 
 .typography--variant-h3 {
-  font-size: 3rem;
+  font-size: var(--typography-headline-3);
   font-weight: 500;
 }
 
 .typography--variant-h4 {
-  font-size: 2.125rem;
+  font-size: var(--typography-headline-4);
   font-weight: 500;
 }
 
 .typography--variant-h5 {
-  font-size: 1.5rem;
+  font-size: var(--typography-headline-5);
   font-weight: 500;
 }
 
 .typography--variant-h6 {
-  font-size: 1.25rem;
+  font-size: var(--typography-headline-6);
   font-weight: 500;
 }
 
-.typography--variant-subheading1 {
-  font-size: 1rem;
+.typography--variant-subtitle-1 {
+  font-size: var(--typography-subtitle-1);
   font-weight: 500;
 }
 
-.typography--variant-subheading2 {
-  font-size: 0.875rem;
+.typography--variant-subtitle-2 {
+  font-size: var(--typography-subtitle-2);
   font-weight: 500;
 }
 
 .typography--variant-body1 {
-  font-size: 1rem;
+  font-size: var(--typography-body-1);
 }
 
 .typography--variant-body1 {
-  font-size: 0.875rem;
+  font-size: var(--typography-body-2);
 }
 
-.typography--color-primary {
-  color: var(--mdc-theme-primary);
+.typography--color-light {
+  color: var(--typography-color-darker-900);
 }
 
-.typography--color-text {
-  color: var(--mdc-theme-on-surface);
-}
-
-
-.typography--color-error {
-  color: var(--mdc-theme-error);
+.typography--color-dark {
+  color: var(--typography-color-lighter-900);
 }
