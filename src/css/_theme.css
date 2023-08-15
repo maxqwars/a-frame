@@ -34,55 +34,205 @@
 * New UI / V2
 */
 :root {
-
-  /* Typography */
+  /* 
+  * ⌨️ Typography
+  */
 
   /* Font family */
   --typography-font-family: 'Inter';
 
-  /* Headlines */
-  --typography-headline-1: ;
-  --typography-headline-2: ;
-  --typography-headline-3: ;
-  --typography-headline-4: ;
-  --typography-headline-5: ;
-  --typography-headline-6: ;
+  /* Font size */
+  --typography-headline-1: 6rem;
+  --typography-headline-2: 3.75rem;
+  --typography-headline-3: 3rem;
+  --typography-headline-4: 2.125rem;
+  --typography-headline-5: 1.5rem;
+  --typography-headline-6: 1.25rem;
 
   /* Subtitles */
-  --typography-subtitle-1: ;
-  --typography-subtitle-2: ;
+  --typography-subtitle-1: 1rem;
+  --typography-subtitle-2: 0.875rem;
 
   /* Paragraphs */
-  --typography-body-1: ;
-  --typography-body-2: ;
+  --typography-body-1: 1rem;
+  --typography-body-2: 0.875rem;
 
   /* UI */
-  --typography-button: ;
-  --typography-caption: ;
-  --typography-overline: ;
+  --typography-button: 0.875rem;
+  --typography-caption: 0.75rem;
+  --typography-overline: 0.75rem;
 
-  /* Typography END */
+  /* 
+  * 🎨 Palette
+  */
 
-  /* Palette */
+  /* surface, background */
+  --background-color: #ffffff;
+  --surface-color: #fffffff5;
 
-  --accent-color: ;
-  --success-color: ;
-  --surface-color: ;
+  /* Base palette */
+  --accent-color: #007aff;
+  --success-color: #4cd964;
+  --error-color: #ff3b30;
+  --typography-color: #333333;
 
-  /* Palette END */
+  /* background color variants */
 
+  --background-color-lighter-100: color-mix(in srgb, var(--background-color) 10%, white);
+  --background-color-lighter-200: color-mix(in srgb, var(--background-color) 20%, white);
+  --background-color-lighter-300: color-mix(in srgb, var(--background-color) 30%, white);
+  --background-color-lighter-400: color-mix(in srgb, var(--background-color) 40%, white);
+  --background-color-lighter-500: color-mix(in srgb, var(--background-color) 50%, white);
+  --background-color-lighter-600: color-mix(in srgb, var(--background-color) 60%, white);
+  --background-color-lighter-700: color-mix(in srgb, var(--background-color) 70%, white);
+  --background-color-lighter-800: color-mix(in srgb, var(--background-color) 80%, white);
+  --background-color-lighter-900: color-mix(in srgb, var(--background-color) 90%, white);
 
-  /* Shadows */
+  --background-color-darker-100: color-mix(in srgb, var(--background-color) 10%, black);
+  --background-color-darker-200: color-mix(in srgb, var(--background-color) 20%, black);
+  --background-color-darker-300: color-mix(in srgb, var(--background-color) 30%, black);
+  --background-color-darker-400: color-mix(in srgb, var(--background-color) 40%, black);
+  --background-color-darker-500: color-mix(in srgb, var(--background-color) 50%, black);
+  --background-color-darker-600: color-mix(in srgb, var(--background-color) 60%, black);
+  --background-color-darker-700: color-mix(in srgb, var(--background-color) 70%, black);
+  --background-color-darker-800: color-mix(in srgb, var(--background-color) 80%, black);
+  --background-color-darker-900: color-mix(in srgb, var(--background-color) 90%, black);
 
-  /* Shadows END */
+  /* surface color variants */
 
+  --surface-color-lighter-100: color-mix(in srgb, var(--surface-color) 10%, white);
+  --surface-color-lighter-200: color-mix(in srgb, var(--surface-color) 20%, white);
+  --surface-color-lighter-300: color-mix(in srgb, var(--surface-color) 30%, white);
+  --surface-color-lighter-400: color-mix(in srgb, var(--surface-color) 40%, white);
+  --surface-color-lighter-500: color-mix(in srgb, var(--surface-color) 50%, white);
+  --surface-color-lighter-600: color-mix(in srgb, var(--surface-color) 60%, white);
+  --surface-color-lighter-700: color-mix(in srgb, var(--surface-color) 70%, white);
+  --surface-color-lighter-800: color-mix(in srgb, var(--surface-color) 80%, white);
+  --surface-color-lighter-900: color-mix(in srgb, var(--surface-color) 90%, white);
 
-  /* Shapes */
+  --surface-color-darker-100: color-mix(in srgb, var(--surface-color) 10%, black);
+  --surface-color-darker-200: color-mix(in srgb, var(--surface-color) 20%, black);
+  --surface-color-darker-300: color-mix(in srgb, var(--surface-color) 30%, black);
+  --surface-color-darker-400: color-mix(in srgb, var(--surface-color) 40%, black);
+  --surface-color-darker-500: color-mix(in srgb, var(--surface-color) 50%, black);
+  --surface-color-darker-600: color-mix(in srgb, var(--surface-color) 60%, black);
+  --surface-color-darker-700: color-mix(in srgb, var(--surface-color) 70%, black);
+  --surface-color-darker-800: color-mix(in srgb, var(--surface-color) 80%, black);
+  --surface-color-darker-900: color-mix(in srgb, var(--surface-color) 90%, black);
+
+  /* accent color variants */
+
+  --accent-color-lighter-100: color-mix(in srgb, var(--accent-color) 10%, white);
+  --accent-color-lighter-200: color-mix(in srgb, var(--accent-color) 20%, white);
+  --accent-color-lighter-300: color-mix(in srgb, var(--accent-color) 30%, white);
+  --accent-color-lighter-400: color-mix(in srgb, var(--accent-color) 40%, white);
+  --accent-color-lighter-500: color-mix(in srgb, var(--accent-color) 50%, white);
+  --accent-color-lighter-600: color-mix(in srgb, var(--accent-color) 60%, white);
+  --accent-color-lighter-700: color-mix(in srgb, var(--accent-color) 70%, white);
+  --accent-color-lighter-800: color-mix(in srgb, var(--accent-color) 80%, white);
+  --accent-color-lighter-900: color-mix(in srgb, var(--accent-color) 90%, white);
+
+  --accent-color-darker-100: color-mix(in srgb, var(--accent-color) 10%, black);
+  --accent-color-darker-200: color-mix(in srgb, var(--accent-color) 20%, black);
+  --accent-color-darker-300: color-mix(in srgb, var(--accent-color) 30%, black);
+  --accent-color-darker-400: color-mix(in srgb, var(--accent-color) 40%, black);
+  --accent-color-darker-500: color-mix(in srgb, var(--accent-color) 50%, black);
+  --accent-color-darker-600: color-mix(in srgb, var(--accent-color) 60%, black);
+  --accent-color-darker-700: color-mix(in srgb, var(--accent-color) 70%, black);
+  --accent-color-darker-800: color-mix(in srgb, var(--accent-color) 80%, black);
+  --accent-color-darker-900: color-mix(in srgb, var(--accent-color) 90%, black);
+
+  /* success color variants */
+
+  --success-color-lighter-100: color-mix(in srgb, var(--success-color) 10%, white);
+  --success-color-lighter-200: color-mix(in srgb, var(--success-color) 20%, white);
+  --success-color-lighter-300: color-mix(in srgb, var(--success-color) 30%, white);
+  --success-color-lighter-400: color-mix(in srgb, var(--success-color) 40%, white);
+  --success-color-lighter-500: color-mix(in srgb, var(--success-color) 50%, white);
+  --success-color-lighter-600: color-mix(in srgb, var(--success-color) 60%, white);
+  --success-color-lighter-700: color-mix(in srgb, var(--success-color) 70%, white);
+  --success-color-lighter-800: color-mix(in srgb, var(--success-color) 80%, white);
+  --success-color-lighter-900: color-mix(in srgb, var(--success-color) 90%, white);
+
+  --success-color-darker-100: color-mix(in srgb, var(--success-color) 10%, black);
+  --success-color-darker-200: color-mix(in srgb, var(--success-color) 20%, black);
+  --success-color-darker-300: color-mix(in srgb, var(--success-color) 30%, black);
+  --success-color-darker-400: color-mix(in srgb, var(--success-color) 40%, black);
+  --success-color-darker-500: color-mix(in srgb, var(--success-color) 50%, black);
+  --success-color-darker-600: color-mix(in srgb, var(--success-color) 60%, black);
+  --success-color-darker-700: color-mix(in srgb, var(--success-color) 70%, black);
+  --success-color-darker-800: color-mix(in srgb, var(--success-color) 80%, black);
+  --success-color-darker-900: color-mix(in srgb, var(--success-color) 90%, black);
+
+  /* error color variants */
+
+  --error-color-lighter-100: color-mix(in srgb, var(--error-color) 10%, white);
+  --error-color-lighter-200: color-mix(in srgb, var(--error-color) 20%, white);
+  --error-color-lighter-300: color-mix(in srgb, var(--error-color) 30%, white);
+  --error-color-lighter-400: color-mix(in srgb, var(--error-color) 40%, white);
+  --error-color-lighter-500: color-mix(in srgb, var(--error-color) 50%, white);
+  --error-color-lighter-600: color-mix(in srgb, var(--error-color) 60%, white);
+  --error-color-lighter-700: color-mix(in srgb, var(--error-color) 70%, white);
+  --error-color-lighter-800: color-mix(in srgb, var(--error-color) 80%, white);
+  --error-color-lighter-900: color-mix(in srgb, var(--error-color) 90%, white);
+
+  --error-color-darker-100: color-mix(in srgb, var(--error-color) 10%, black);
+  --error-color-darker-200: color-mix(in srgb, var(--error-color) 20%, black);
+  --error-color-darker-300: color-mix(in srgb, var(--error-color) 30%, black);
+  --error-color-darker-400: color-mix(in srgb, var(--error-color) 40%, black);
+  --error-color-darker-500: color-mix(in srgb, var(--error-color) 50%, black);
+  --error-color-darker-600: color-mix(in srgb, var(--error-color) 60%, black);
+  --error-color-darker-700: color-mix(in srgb, var(--error-color) 70%, black);
+  --error-color-darker-800: color-mix(in srgb, var(--error-color) 80%, black);
+  --error-color-darker-900: color-mix(in srgb, var(--error-color) 90%, black);
+
+  /* typography color variants */
+
+  --typography-color-lighter-100: color-mix(in srgb, var(--typography-color) 10%, white);
+  --typography-color-lighter-200: color-mix(in srgb, var(--typography-color) 20%, white);
+  --typography-color-lighter-300: color-mix(in srgb, var(--typography-color) 30%, white);
+  --typography-color-lighter-400: color-mix(in srgb, var(--typography-color) 40%, white);
+  --typography-color-lighter-500: color-mix(in srgb, var(--typography-color) 50%, white);
+  --typography-color-lighter-600: color-mix(in srgb, var(--typography-color) 60%, white);
+  --typography-color-lighter-700: color-mix(in srgb, var(--typography-color) 70%, white);
+  --typography-color-lighter-800: color-mix(in srgb, var(--typography-color) 80%, white);
+  --typography-color-lighter-900: color-mix(in srgb, var(--typography-color) 90%, white);
+
+  --typography-color-darker-100: color-mix(in srgb, var(--typography-color) 10%, black);
+  --typography-color-darker-200: color-mix(in srgb, var(--typography-color) 20%, black);
+  --typography-color-darker-300: color-mix(in srgb, var(--typography-color) 30%, black);
+  --typography-color-darker-400: color-mix(in srgb, var(--typography-color) 40%, black);
+  --typography-color-darker-500: color-mix(in srgb, var(--typography-color) 50%, black);
+  --typography-color-darker-600: color-mix(in srgb, var(--typography-color) 60%, black);
+  --typography-color-darker-700: color-mix(in srgb, var(--typography-color) 70%, black);
+  --typography-color-darker-800: color-mix(in srgb, var(--typography-color) 80%, black);
+  --typography-color-darker-900: color-mix(in srgb, var(--typography-color) 90%, black);
+
+  /* 
+  * Shadows, glows
+  */
+
+  --shadow-small: 0.4px 0.7px 2.2px rgba(0, 0, 0, 0.02), 1px 1.7px 5.3px rgba(0, 0, 0, 0.028),
+    1.9px 3.1px 10px rgba(0, 0, 0, 0.035), 3.4px 5.6px 17.9px rgba(0, 0, 0, 0.042),
+    6.3px 10.4px 33.4px rgba(0, 0, 0, 0.05), 15px 25px 80px rgba(0, 0, 0, 0.07);
+
+  /* TODO: Add --shadow-medium, --shadow-heavy */
+  --shadow-medium: ;
+  --shadow-heavy: ;
+
+  --glow-small: 0.4px 0.7px 2.2px rgba(0, 0, 0, 0.07), 1px 1.7px 5.3px rgba(0, 0, 0, 0.05),
+    1.9px 3.1px 10px rgba(0, 0, 0, 0.042), 3.4px 5.6px 17.9px rgba(0, 0, 0, 0.035),
+    6.3px 10.4px 33.4px rgba(0, 0, 0, 0.028), 15px 25px 80px rgba(0, 0, 0, 0.02);
+
+  /* TODO: Add --glow-medium, --glow-heavy */
+  --glow-medium: ;
+  --glow-heavy: ;
+
+  /* 
+  * 📐 Shapes 
+  */
 
   --shape-small: 2px;
   --shape-medium: 5px;
   --shape-heavy: 10px;
-
-  /* Shapes END */
-
 }
