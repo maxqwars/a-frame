@@ -2,21 +2,17 @@
 @import './css/_theme.css';
 
 * {
-  font-family: var(--mdc-typography--font-family);
-}
-
-body {
-  background: var(--mdc-theme-background);
+  font-family: var(--typography-font-family);
 }
 
 * {
   color: inherit;
 }
 
-.dark-body {
-  background-color: var(--mdc-theme-background-dark) !important;
+body.dark-body {
+  background-color: var(--dark-background-color) !important;
 }
 
 body.light-body {
-  background-color: var(--mdc-theme-background) !important;
+  background-color: var(--light-background-color) !important;
 }

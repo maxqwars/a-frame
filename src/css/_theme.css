@@ -67,8 +67,11 @@
   */
 
   /* surface, background */
-  --background-color: #ffffff;
-  --surface-color: #fffffff5;
+  --light-background-color: #ffffff;
+  --light-surface-color: #ffffff;
+
+  --dark-background-color: #000000;
+  --dark-surface-color: #000000;
 
   /* Base palette */
   --accent-color: #007aff;
@@ -76,49 +79,52 @@
   --error-color: #ff3b30;
   --typography-color: #252525;
 
+  --light-typography-color: #000000;
+  --dark-typography-color: #ffffff;
+
   /* background color variants */
 
-  --background-color-lighter-100: color-mix(in srgb, var(--background-color) 10%, white);
-  --background-color-lighter-200: color-mix(in srgb, var(--background-color) 20%, white);
-  --background-color-lighter-300: color-mix(in srgb, var(--background-color) 30%, white);
-  --background-color-lighter-400: color-mix(in srgb, var(--background-color) 40%, white);
-  --background-color-lighter-500: color-mix(in srgb, var(--background-color) 50%, white);
-  --background-color-lighter-600: color-mix(in srgb, var(--background-color) 60%, white);
-  --background-color-lighter-700: color-mix(in srgb, var(--background-color) 70%, white);
-  --background-color-lighter-800: color-mix(in srgb, var(--background-color) 80%, white);
-  --background-color-lighter-900: color-mix(in srgb, var(--background-color) 90%, white);
+  --dark-background-color-lighter-100: color-mix(in srgb, var(--dark-background-color) 10%, white);
+  --dark-background-color-lighter-200: color-mix(in srgb, var(--dark-background-color) 20%, white);
+  --dark-background-color-lighter-300: color-mix(in srgb, var(--dark-background-color) 30%, white);
+  --dark-background-color-lighter-400: color-mix(in srgb, var(--dark-background-color) 40%, white);
+  --dark-background-color-lighter-500: color-mix(in srgb, var(--dark-background-color) 50%, white);
+  --dark-background-color-lighter-600: color-mix(in srgb, var(--dark-background-color) 60%, white);
+  --dark-background-color-lighter-700: color-mix(in srgb, var(--dark-background-color) 70%, white);
+  --dark-background-color-lighter-800: color-mix(in srgb, var(--dark-background-color) 80%, white);
+  --dark-background-color-lighter-900: color-mix(in srgb, var(--dark-background-color) 90%, white);
 
-  --background-color-darker-100: color-mix(in srgb, var(--background-color) 10%, black);
-  --background-color-darker-200: color-mix(in srgb, var(--background-color) 20%, black);
-  --background-color-darker-300: color-mix(in srgb, var(--background-color) 30%, black);
-  --background-color-darker-400: color-mix(in srgb, var(--background-color) 40%, black);
-  --background-color-darker-500: color-mix(in srgb, var(--background-color) 50%, black);
-  --background-color-darker-600: color-mix(in srgb, var(--background-color) 60%, black);
-  --background-color-darker-700: color-mix(in srgb, var(--background-color) 70%, black);
-  --background-color-darker-800: color-mix(in srgb, var(--background-color) 80%, black);
-  --background-color-darker-900: color-mix(in srgb, var(--background-color) 90%, black);
+  --light-background-color-darker-100: color-mix(in srgb, var(--light-background-color) 10%, black);
+  --light-background-color-darker-200: color-mix(in srgb, var(--light-background-color) 20%, black);
+  --light-background-color-darker-300: color-mix(in srgb, var(--light-background-color) 30%, black);
+  --light-background-color-darker-400: color-mix(in srgb, var(--light-background-color) 40%, black);
+  --light-background-color-darker-500: color-mix(in srgb, var(--light-background-color) 50%, black);
+  --light-background-color-darker-600: color-mix(in srgb, var(--light-background-color) 60%, black);
+  --light-background-color-darker-700: color-mix(in srgb, var(--light-background-color) 70%, black);
+  --light-background-color-darker-800: color-mix(in srgb, var(--light-background-color) 80%, black);
+  --light-background-color-darker-900: color-mix(in srgb, var(--light-background-color) 90%, black);
 
   /* surface color variants */
 
-  --surface-color-lighter-100: color-mix(in srgb, var(--surface-color) 10%, white);
-  --surface-color-lighter-200: color-mix(in srgb, var(--surface-color) 20%, white);
-  --surface-color-lighter-300: color-mix(in srgb, var(--surface-color) 30%, white);
-  --surface-color-lighter-400: color-mix(in srgb, var(--surface-color) 40%, white);
-  --surface-color-lighter-500: color-mix(in srgb, var(--surface-color) 50%, white);
-  --surface-color-lighter-600: color-mix(in srgb, var(--surface-color) 60%, white);
-  --surface-color-lighter-700: color-mix(in srgb, var(--surface-color) 70%, white);
-  --surface-color-lighter-800: color-mix(in srgb, var(--surface-color) 80%, white);
-  --surface-color-lighter-900: color-mix(in srgb, var(--surface-color) 90%, white);
+  --dark-surface-color-lighter-100: color-mix(in srgb, var(--dark-surface-color) 10%, white);
+  --dark-surface-color-lighter-200: color-mix(in srgb, var(--dark-surface-color) 20%, white);
+  --dark-surface-color-lighter-300: color-mix(in srgb, var(--dark-surface-color) 30%, white);
+  --dark-surface-color-lighter-400: color-mix(in srgb, var(--dark-surface-color) 40%, white);
+  --dark-surface-color-lighter-500: color-mix(in srgb, var(--dark-surface-color) 50%, white);
+  --dark-surface-color-lighter-600: color-mix(in srgb, var(--dark-surface-color) 60%, white);
+  --dark-surface-color-lighter-700: color-mix(in srgb, var(--dark-surface-color) 70%, white);
+  --dark-surface-color-lighter-800: color-mix(in srgb, var(--dark-surface-color) 80%, white);
+  --dark-surface-color-lighter-900: color-mix(in srgb, var(--dark-surface-color) 90%, white);
 
-  --surface-color-darker-100: color-mix(in srgb, var(--surface-color) 10%, black);
-  --surface-color-darker-200: color-mix(in srgb, var(--surface-color) 20%, black);
-  --surface-color-darker-300: color-mix(in srgb, var(--surface-color) 30%, black);
-  --surface-color-darker-400: color-mix(in srgb, var(--surface-color) 40%, black);
-  --surface-color-darker-500: color-mix(in srgb, var(--surface-color) 50%, black);
-  --surface-color-darker-600: color-mix(in srgb, var(--surface-color) 60%, black);
-  --surface-color-darker-700: color-mix(in srgb, var(--surface-color) 70%, black);
-  --surface-color-darker-800: color-mix(in srgb, var(--surface-color) 80%, black);
-  --surface-color-darker-900: color-mix(in srgb, var(--surface-color) 90%, black);
+  --light-surface-color-darker-100: color-mix(in srgb, var(--light-surface-color) 10%, black);
+  --light-surface-color-darker-200: color-mix(in srgb, var(--light-surface-color) 20%, black);
+  --light-surface-color-darker-300: color-mix(in srgb, var(--light-surface-color) 30%, black);
+  --light-surface-color-darker-400: color-mix(in srgb, var(--light-surface-color) 40%, black);
+  --light-surface-color-darker-500: color-mix(in srgb, var(--light-surface-color) 50%, black);
+  --light-surface-color-darker-600: color-mix(in srgb, var(--light-surface-color) 60%, black);
+  --light-surface-color-darker-700: color-mix(in srgb, var(--light-surface-color) 70%, black);
+  --light-surface-color-darker-800: color-mix(in srgb, var(--light-surface-color) 80%, black);
+  --light-surface-color-darker-900: color-mix(in srgb, var(--light-surface-color) 90%, black);
 
   /* accent color variants */
 

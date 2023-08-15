@@ -1,5 +1,3 @@
-@import '../../../css/_theme.css';
-
 .typography--variant-h1 {
   font-size: var(--typography-headline-1);
   font-weight: 500;
@@ -49,9 +47,9 @@
 }
 
 .typography--color-light {
-  color: var(--typography-color-darker-900);
+  color: var(--light-typography-color);
 }
 
 .typography--color-dark {
-  color: var(--typography-color-lighter-900);
+  color: var(--dark-typography-color);
 }
