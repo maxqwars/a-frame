@@ -1,4 +1,11 @@
 {
+  "app-name": "Mizuhiki",
+  "nav-home-label": "Home",
+  "nav-catalog-label": "Catalog",
+  "nav-settings-label": "Settings",
+  "nav-debug-label": "Debug",
+  "nav-bookmarks-label": "Bookmarks",
+  "search-placeholder": "Start typing here...",
   "announce_app-name": "Mizuhiki",
   "announce_subtitle": "Open, Modern, Unified"
 }
