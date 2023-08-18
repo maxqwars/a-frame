@@ -12,6 +12,9 @@ import { ThemeContext } from '@/context/ThemeContext';
 import HomeView from '@/views/HomeView';
 import DebugView from '@/views/DebugView';
 import SettingsView from '@/views/SettingsView';
+import BookmarksView from '@/views/BookmarksView';
+import CatalogView from '@/views/CatalogView';
+import SearchView from '@/views/SearchView';
 
 /* Create router */
 const router = createBrowserRouter([
@@ -26,6 +29,22 @@ const router = createBrowserRouter([
   {
     path: '/settings',
     element: <SettingsView />,
+  },
+  {
+    path: '/bookmarks',
+    element: <BookmarksView />,
+  },
+  {
+    path: '/catalog',
+    element: <CatalogView />,
+  },
+  {
+    path: '/release/:code',
+    element: <>Release view</>,
+  },
+  {
+    path: '/search',
+    element: <SearchView />,
   },
 ]);
 

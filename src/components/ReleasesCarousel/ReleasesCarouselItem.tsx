@@ -16,7 +16,7 @@ const ReleasesCarouselItem = ({ data }: ReleasesCarouselItemProps) => {
     <div
       className={cn('release-carousel__item')}
       onClick={() => {
-        navigate(`/release?id=${data.code}`);
+        navigate(`/release/${data.code}`);
       }}
     >
       <img className={cn('release-carousel__image')} src={data.imageUrl} alt={data.name} />
