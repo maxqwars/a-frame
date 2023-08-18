@@ -15,7 +15,7 @@ import useBrowserControls from '@/hooks/useBrowserControls';
 import logo from '@/assets/mizuhiki-logo.svg';
 
 const HomeView = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(); // WARN: This component use useTranslation()
   const { setDocumentTitle } = useBrowserControls();
 
   useEffect(() => {

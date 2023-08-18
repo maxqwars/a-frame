@@ -7,7 +7,7 @@ import { ThemeContext } from '@/context/ThemeContext';
 
 const NavbarSearch = () => {
   const theme = useContext(ThemeContext);
-  const { t } = useTranslation();
+  const { t } = useTranslation(); // WARN: This component use useTranslation()
 
   return (
     <div className={cn('navbar__search')}>

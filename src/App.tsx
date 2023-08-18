@@ -9,7 +9,6 @@ import { useAppSelector } from '@/store/hooks';
 import { ThemeContext } from '@/context/ThemeContext';
 
 /* Views */
-import AnnounceView from '@/views/AnnounceView';
 import HomeView from '@/views/HomeView';
 import DebugView from '@/views/DebugView';
 import SettingsView from '@/views/SettingsView';
@@ -19,10 +18,6 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeView />,
-  },
-  {
-    path: '/announce',
-    element: <AnnounceView />,
   },
   {
     path: '/debug',
@@ -37,7 +32,7 @@ const router = createBrowserRouter([
 function App() {
   const browserTheme = useBrowserTheme();
   const appTheme = useAppSelector((state) => state.appConfigReducer.theme);
-  const { t } = useTranslation();
+  const { t } = useTranslation(); // WARN: This component use useTranslation()
   const { setBodyTheme, setDocumentTitle } = useBrowserControls();
 
   /* Prepare browser */

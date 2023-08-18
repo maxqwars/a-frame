@@ -5,7 +5,7 @@ import { Navbar, NavbarLink } from '@/components/Navbar';
 import logo from '@/assets/mizuhiki-logo.svg';
 
 const NavigationLayout = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(); // WARN: This component use useTranslation()
   const { pathname } = useLocation();
 
   return (
