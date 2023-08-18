@@ -1,8 +1,10 @@
-![](https://github.com/maxqwars/mizuhiki/blob/main/.github/images/gh_rep_intro.png?raw=true)
+<!-- ![](https://github.com/maxqwars/mizuhiki/blob/main/.github/images/gh_rep_intro.png?raw=true) -->
 
 # Mizuhiki
 
 Mizuhiki - Open Source & modern AniLibria API web client.
+
+![](.github/images/chrome.png)
 
 ## 🚀 Features
 
@@ -15,8 +17,8 @@ Mizuhiki - Open Source & modern AniLibria API web client.
 ## Community
 
 <!-- TODO: Create Discord server -->
-![](https://skillicons.dev/icons?i=discord)
 
+![](https://skillicons.dev/icons?i=discord)
 
 ## 🔨 Contributing
 
