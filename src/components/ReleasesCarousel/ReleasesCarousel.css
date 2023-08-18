@@ -19,3 +19,25 @@ img.release-carousel__image {
   height: inherit;
   border-radius: var(--shape-small);
 }
+
+.release-carousel__placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--shape-heavy);
+  width: 100%;
+  height: 23vh;
+  text-transform: uppercase;
+  font-size: var(--typography-headline-4);
+  font-weight: bold;
+}
+
+.release-carousel__placeholder_light {
+  background: var(--light-background-color-darker-900);
+  color: var(--light-background-color-darker-300);
+}
+
+.release-carousel__placeholder_dark {
+  background: var(--dark-background-color-lighter-900);
+  color: var(--dark-background-color-lighter-300);
+}
