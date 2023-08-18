@@ -7,13 +7,13 @@ import { ThemeContext } from '@/context/ThemeContext';
 
 const NavbarSearch = () => {
   const theme = useContext(ThemeContext);
-  const { t } = useTranslation(); // WARN: This component use useTranslation()
+  const { t } = useTranslation('Navbar'); // WARN: This component use useTranslation()
 
   return (
     <div className={cn('navbar__search')}>
       <form action="" className={cn('navbar__search-form')}>
         <input
-          placeholder={t('search-placeholder')}
+          placeholder={t('search_placeholder')}
           className={cn('navbar__search-input', {
             [`navbar__search-input_${theme}`]: theme,
           })}

@@ -5,25 +5,25 @@ import { Navbar, NavbarLink } from '@/components/Navbar';
 import logo from '@/assets/mizuhiki-logo.svg';
 
 const NavigationLayout = () => {
-  const { t } = useTranslation(); // WARN: This component use useTranslation()
+  const { t } = useTranslation('NavigationLayout'); // WARN: This component use useTranslation()
   const { pathname } = useLocation();
 
   return (
     <Navbar image={logo}>
       <NavbarLink to="/" isActive={pathname === '/'}>
-        {t('nav-home-label')}
+        {t('home_view_label')}
       </NavbarLink>
 
       <NavbarLink to="/catalog" isActive={pathname === '/catalog'}>
-        {t('nav-catalog-label')}
+        {t('catalog_view_label')}
       </NavbarLink>
 
       <NavbarLink to="/bookmarks" isActive={pathname === '/bookmarks'}>
-        {t('nav-bookmarks-label')}
+        {t('bookmarks_view_label')}
       </NavbarLink>
 
       <NavbarLink to="/settings" isActive={pathname === '/settings'}>
-        {t('nav-settings-label')}
+        {t('settings_view_label')}
       </NavbarLink>
     </Navbar>
   );
