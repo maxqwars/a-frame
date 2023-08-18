@@ -74,6 +74,7 @@
   --dark-surface-color: #000000;
 
   /* Base palette */
+  /* --accent-color: #a985be; */
   --accent-color: #007aff;
   --success-color: #4cd964;
   --error-color: #ff3b30;

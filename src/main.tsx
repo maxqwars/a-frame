@@ -9,7 +9,7 @@ import store from '@/store/store';
 import { appConfigModel } from '@/models/AppConfigModel';
 import { setConfig } from '@/store/slices/AppConfig.ts';
 
-import './global.css';
+import './main.css';
 
 /* Set language */
 const i18n = initI18n(

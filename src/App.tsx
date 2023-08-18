@@ -17,11 +17,11 @@ import DebugView from '@/views/DebugView';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <AnnounceView />,
+    element: <HomeView />,
   },
   {
-    path: '/home',
-    element: <HomeView />,
+    path: '/announce',
+    element: <AnnounceView />,
   },
   {
     path: '/debug',
