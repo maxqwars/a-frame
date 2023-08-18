@@ -12,6 +12,7 @@ import { ThemeContext } from '@/context/ThemeContext';
 import AnnounceView from '@/views/AnnounceView';
 import HomeView from '@/views/HomeView';
 import DebugView from '@/views/DebugView';
+import SettingsView from '@/views/SettingsView';
 
 /* Create router */
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: '/debug',
     element: <DebugView />,
+  },
+  {
+    path: '/settings',
+    element: <SettingsView />,
   },
 ]);
 

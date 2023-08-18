@@ -1,0 +1,47 @@
+/* TODO: Implement SelectControl */
+
+/* .select-control {
+  display: flex;
+  width: 100%;
+  height: 64px;
+  margin: 10px 0px;
+  border-radius: var(--shape-medium);
+}
+
+.select-control select {
+  display: none;
+}
+
+.select-control_light {
+  background: var(--light-background-color-darker-900);
+}
+
+.select-control_select-container {
+}
+
+.select-control_select-selector {
+  width: 100%;
+  min-width: 15ch;
+  max-width: 30ch;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  border-radius: var(--shape-medium);
+}
+
+.select-control_select-selector_light {
+  border: 1px solid var(--light-background-color-darker-800);
+}
+
+.select-control__label {
+  display: block;
+  font-family: var(--typography-font-family);
+  font-size: var(--typography-headline-4);
+} */

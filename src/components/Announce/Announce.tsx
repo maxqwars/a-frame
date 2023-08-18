@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import styles from './Announce.module.css';
 
-import Typography from '@/components/UI/Typography';
+import { Typography } from '@/components/Typography';
 
 import DiscordIcon from '@/assets/discord-6.svg';
 import GitHubIcon from '@/assets/github-icon-1.svg';
