@@ -1,0 +1,19 @@
+{
+    "recommendations": [
+        "alefragnani.bookmarks",
+        "aaron-bond.better-comments",
+        "streetsidesoftware.code-spell-checker",
+        "formulahendry.auto-rename-tag",
+        "steoates.autoimport",
+        "formulahendry.auto-close-tag",
+        "pranaygp.vscode-css-peek",
+        "dsznajder.es7-react-js-snippets",
+        "dbaeumer.vscode-eslint",
+        "ecmel.vscode-html-css",
+        "ms-vscode.vscode-typescript-next",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode",
+        "gruntfuggly.todo-tree"
+    ]
+}
