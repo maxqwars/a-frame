@@ -25,6 +25,10 @@ const NavigationLayout = () => {
       <NavbarLink to="/settings" isActive={pathname === '/settings'}>
         {t('settings_view_label')}
       </NavbarLink>
+
+      <NavbarLink to="/debug" isActive={pathname === '/debug'}>
+        Developer options
+      </NavbarLink>
     </Navbar>
   );
 };

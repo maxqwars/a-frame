@@ -39,6 +39,7 @@ const HomeView = () => {
             <Typography variant="h4" align="left">
               {t('youtube_updates_heading')}
             </Typography>
+            <Typography>🚧 Under construct</Typography>
           </Container>
         </Section>
       </CommonPageLayout>
