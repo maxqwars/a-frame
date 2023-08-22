@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import CommonPageLayout from '@/layout/CommonPageLayout';
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
-import { Typography } from '@/components/Typography';
 import { DisplayRelease } from '@/components/DisplayRelease';
 
 const ReleaseView = () => {
@@ -14,7 +13,6 @@ const ReleaseView = () => {
     <CommonPageLayout>
       <Section>
         <Container>
-          <Typography variant="h4">{releaseCode}</Typography>
           <DisplayRelease code={releaseCode} />
         </Container>
       </Section>
