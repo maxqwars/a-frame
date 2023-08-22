@@ -2,14 +2,14 @@ import { useEffect } from 'react';
 
 import { ReleasesCarousel } from '@/components/ReleasesCarousel';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { setLoaded, setReleases, ReleaseType } from './RecentUpdatesCarouselSlice';
+import { setLoaded, setReleases, ReleaseType } from './RecentUpdatesCarouselState';
 
 import API from '@/models/APIModel';
 
 const RecentUpdatesCarousel = () => {
   const dispatch = useAppDispatch();
-  const isLoaded = useAppSelector((state) => state.RecentUpdatesCarouselReducer.loaded);
-  const releases = useAppSelector((state) => state.RecentUpdatesCarouselReducer.releases);
+  const isLoaded = useAppSelector((state) => state.recentUpdatesCarouselReducer.loaded);
+  const releases = useAppSelector((state) => state.recentUpdatesCarouselReducer.releases);
 
   useEffect(() => {
     if (!isLoaded) {

@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Container } from '@/components/Container';
 import { Section } from '@/components/Section';
 import { Typography } from '@/components/Typography';
-import { RecentUpdatesCarousel } from '@/components/RecentUpdatesCarousel';
+import { RecentUpdatesCarousel } from '@/containers/RecentUpdatesCarousel';
 import { CommonPageLayout } from '@/layout';
 
 /* App modules */

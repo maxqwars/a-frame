@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import CommonPageLayout from '@/layout/CommonPageLayout';
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
-import { DisplayRelease } from '@/components/DisplayRelease';
+import { DisplayRelease } from '@/containers/DisplayRelease';
 
 const ReleaseView = () => {
   const { pathname } = useLocation();

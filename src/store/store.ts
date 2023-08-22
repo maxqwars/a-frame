@@ -2,12 +2,12 @@ import { configureStore } from '@reduxjs/toolkit';
 
 /* Slices */
 import appConfigReducer from './slices/AppConfig';
-import { RecentUpdatesCarouselReducer } from '@/components/RecentUpdatesCarousel';
-import { DisplayReleaseReducer } from '@/components/DisplayRelease';
+import { recentUpdatesCarouselReducer } from '@/containers/RecentUpdatesCarousel';
+import { displayReleaseReducer } from '@/containers/DisplayRelease';
 
 /* Configure store */
 const store = configureStore({
-  reducer: { appConfigReducer, RecentUpdatesCarouselReducer, DisplayReleaseReducer },
+  reducer: { appConfigReducer, recentUpdatesCarouselReducer, displayReleaseReducer },
   devTools: true,
 });
 

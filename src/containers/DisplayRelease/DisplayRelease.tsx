@@ -2,7 +2,7 @@ import { useEffect, useCallback } from 'react';
 import cn from 'classnames';
 
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { setCurrentCode, setLoaded, setRelease } from './';
+import { setCurrentCode, setLoaded, setRelease } from '.';
 import { Typography } from '@/components/Typography';
 import ApiModel from '@/models/APIModel';
 import DisplayReleaseSection from './DisplayReleaseSection';
@@ -15,7 +15,7 @@ type DisplayReleaseProps = {
 
 const DisplayRelease = ({ code }: DisplayReleaseProps) => {
   const dispatch = useAppDispatch();
-  const { currentCode, releaseData, loaded } = useAppSelector((state) => state.DisplayReleaseReducer);
+  const { currentCode, releaseData, loaded } = useAppSelector((state) => state.displayReleaseReducer);
 
   /* Define update data callback */
   const update = useCallback(() => {
