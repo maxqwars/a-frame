@@ -1,4 +1,4 @@
-import { ReactNode, useContext, useState, useEffect } from 'react';
+import { ReactNode, useContext } from 'react';
 import cn from 'classnames';
 import './BottomNavigation.css';
 import { ThemeContext } from '@/context/ThemeContext';
@@ -16,7 +16,7 @@ const BottomNavigation = ({ children }: BottomNavigationProps) => {
     <div
       className={cn('bottom-navigation', {
         [`bottom-navigation_${theme}`]: theme,
-        'bottom-navigation_hidden': scrollDirection === 'down'
+        'bottom-navigation_hidden': scrollDirection === 'down',
       })}
     >
       {children}

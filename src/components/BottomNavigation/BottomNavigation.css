@@ -31,6 +31,11 @@
   box-shadow: var(--shadow-small);
 }
 
+.bottom-navigation_dark {
+  background: var(--dark-background-color-lighter-900);
+  box-shadow: var(--shadow-small);
+}
+
 .bottom-navigation__item {
   display: flex;
   flex-direction: column;
