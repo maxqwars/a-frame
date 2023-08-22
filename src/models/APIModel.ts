@@ -44,11 +44,21 @@ class APIModel implements IAPIModel {
         code: release.code,
         id: release.id,
         name: release.names?.en,
-        imageUrl: `https://anilibria.tv/${release.posters?.original.url as string}`,
+        imageUrl: `https://anilibria.tv/${release.posters?.original.url  as string}`,
       };
     }) as UpdatedReleasesType[];
 
     return updatedReleases;
+  }
+
+  async getReleaseByCode(code: string) {
+    const { error, data } = await this._metaform3.getTitle({ code });
+
+    if (error || data === null) {
+      throw Error('unknown error');
+    }
+
+    return data;
   }
 }
 

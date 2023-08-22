@@ -15,6 +15,7 @@ import SettingsView from '@/views/SettingsView';
 import BookmarksView from '@/views/BookmarksView';
 import CatalogView from '@/views/CatalogView';
 import SearchView from '@/views/SearchView';
+import ReleaseView from '@/views/ReleaseView';
 
 /* Create router */
 const router = createBrowserRouter([
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/release/:code',
-    element: <>Release view</>,
+    element: <ReleaseView />,
   },
   {
     path: '/search',
