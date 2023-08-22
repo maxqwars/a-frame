@@ -1,35 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
-:root {
-  /* Shared */
-  --mdc-typography--font-family: 'Inter';
-  --mdc-shape-small: 4px;
-  --mdc-shape-medium: 4px;
-  --mdc-shape-large: 0px;
-
-  /* Light theme */
-  --mdc-theme-primary: #4f6d7a;
-  --mdc-theme-on-primary: #2a2d34;
-  --mdc-theme-secondary: #018786;
-  --mdc-theme-on-secondary: #ffffff;
-  --mdc-theme-error: #b00020;
-  --mdc-theme-on-error: #ffffff;
-  --mdc-theme-surface: #eaeaea;
-  --mdc-theme-on-surface: #2a2d34;
-  --mdc-theme-background: #ffffff;
-
-  /* Dark theme */
-  --mdc-theme-primary-dark: #6200ee;
-  --mdc-theme-on-primary-dark: #ffffff;
-  --mdc-theme-secondary-dark: #018786;
-  --mdc-theme-on-secondary-dark: #ffffff;
-  --mdc-theme-error-dark: #b00020;
-  --mdc-theme-on-error-dark: #ffffff;
-  --mdc-theme-surface-dark: #000000;
-  --mdc-theme-on-surface-dark: #ffffff;
-  --mdc-theme-background-dark: #000000;
-}
-
 /* 
 * New UI / V2
 */
@@ -220,7 +190,8 @@
   */
 
   --shadow-small: 0.4px 0.7px 2.2px rgba(0, 0, 0, 0.02), 1px 1.7px 5.3px rgba(0, 0, 0, 0.028),
-    1.9px 3.1px 10px rgba(0, 0, 0, 0.035), 3.4px 5.6px 17.9px rgba(0, 0, 0, 0.042), 6.3px 10.4px 33.4px rgba(0, 0, 0, 0.05), 15px 25px 80px rgba(0, 0, 0, 0.07);
+    1.9px 3.1px 10px rgba(0, 0, 0, 0.035), 3.4px 5.6px 17.9px rgba(0, 0, 0, 0.042),
+    6.3px 10.4px 33.4px rgba(0, 0, 0, 0.05), 15px 25px 80px rgba(0, 0, 0, 0.07);
 
   /* TODO: Add --shadow-medium, --shadow-heavy */
   --shadow-medium: ;
