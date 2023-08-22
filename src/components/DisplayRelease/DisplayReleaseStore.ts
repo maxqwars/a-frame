@@ -7,7 +7,8 @@ export type ReleaseDataType = {
   desc: string;
   genres: string;
   inFavorites: number;
-  changedAt: number
+  changedAt: number;
+  posterImageUrl: string;
 };
 
 type DisplayReleaseState = {
