@@ -27,7 +27,12 @@ class APIModel implements IAPIModel {
   private _metaform3: Metaform3;
 
   constructor() {
-    this._metaform3 = new Metaform3();
+    this._metaform3 = new Metaform3({
+      apiVer: 'v3',
+      apiDomain: 'api.wwnd.space/',
+      https: true,
+      timeout: 1000,
+    });
   }
 
   async getUpdatedReleases(): Promise<UpdatedReleasesType[]> {
@@ -44,7 +49,7 @@ class APIModel implements IAPIModel {
         code: release.code,
         id: release.id,
         name: release.names?.en,
-        imageUrl: `https://anilibria.tv/${release.posters?.original.url  as string}`,
+        imageUrl: `https://static.wwnd.space${release.posters?.original?.url as string}`,
       };
     }) as UpdatedReleasesType[];
 
