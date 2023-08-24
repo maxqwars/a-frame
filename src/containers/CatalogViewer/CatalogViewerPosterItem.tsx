@@ -3,8 +3,8 @@
 import { ThemeContext } from '@/context/ThemeContext';
 import cn from 'classnames';
 import { useContext } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useNavigate } from 'react-router-dom';
+import { PosterImage } from '@/components/PosterImage';
 
 type CatalogViewerPosterItemProps = {
   image?: string;
@@ -18,12 +18,12 @@ const CatalogViewerPosterItem = ({ image, alt, code }: CatalogViewerPosterItemPr
 
   return (
     <div className={cn('catalog-viewer__poster-wrapper')} onClick={() => navigate(`/release/${code}`)}>
-      <LazyLoadImage
+      <PosterImage
         className={cn('catalog-viewer__poster-image', {
           [`catalog-viewer__poster-image_${theme}`]: theme,
         })}
         src={`https://static.wwnd.space/${image}`}
-        alt={alt}
+        alt={alt || ''}
       />
     </div>
   );
