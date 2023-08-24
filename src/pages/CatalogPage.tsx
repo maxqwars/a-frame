@@ -12,7 +12,6 @@ const CatalogPage = () => {
     <CommonPageLayout>
       <Section>
         <Container>
-          {document.body.clientWidth}
           <CatalogViewer currentPage={currentPage} itemsPerPage={18} />
         </Container>
       </Section>
