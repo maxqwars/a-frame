@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import cn from 'classnames';
 import { useNavigate } from 'react-router-dom';
+import { PosterImage } from '@/components/PosterImage';
 
 import { ReleasesCarouselItemType } from './types';
 
@@ -19,7 +20,7 @@ const ReleasesCarouselItem = ({ data }: ReleasesCarouselItemProps) => {
         navigate(`/release/${data.code}`);
       }}
     >
-      <img className={cn('release-carousel__image')} src={data.imageUrl} alt={data.name} />
+      <PosterImage className={cn('release-carousel__image')} src={data.imageUrl} alt={data.name} />
     </div>
   );
 };
