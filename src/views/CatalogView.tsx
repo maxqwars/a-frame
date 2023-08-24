@@ -1,6 +1,5 @@
 import { Container } from '@/components/Container';
 import { Section } from '@/components/Section';
-import { Typography } from '@/components/Typography';
 import { CatalogViewer } from '@/containers/CatalogViewer';
 import { CommonPageLayout } from '@/layout';
 
@@ -13,8 +12,7 @@ const CatalogView = () => {
     <CommonPageLayout>
       <Section>
         <Container>
-          <Typography>🚧 Under construct / page {currentPage}</Typography>
-          <CatalogViewer currentPage={currentPage} itemsPerPage={9} />
+          <CatalogViewer currentPage={currentPage} itemsPerPage={15} />
         </Container>
       </Section>
     </CommonPageLayout>

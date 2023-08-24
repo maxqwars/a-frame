@@ -2,6 +2,13 @@ import { useEffect, useCallback } from 'react';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { setPage, setItems, setError, setIsLoad } from './';
 import { getCatalog } from '@/api/getCatalog';
+import CatalogViewerPosterItem from './CatalogViewerPosterItem';
+import CatalogViewerPagination from './CatalogViewerPagination';
+
+import cn from 'classnames';
+
+import './CatalogViewer.css';
+import { setPages } from './CatalogViewerState';
 
 type CatalogViewerProps = {
   currentPage: number;
@@ -10,30 +17,52 @@ type CatalogViewerProps = {
 
 const CatalogViewer = ({ currentPage, itemsPerPage }: CatalogViewerProps) => {
   const dispatch = useAppDispatch();
-  const { page, items } = useAppSelector((state) => state.catalogViewerReducer);
+  const { page, items, pages } = useAppSelector((state) => state.catalogViewerReducer);
 
-  const update = useCallback(() => {
+  console.log(`CATALOG_VIEWER: ${page} / ${pages}`);
+
+  const fetchDataFromApi = useCallback(() => {
     setIsLoad(false);
-    getCatalog(itemsPerPage, page, itemsPerPage).then(({ error, data }) => {
-      console.log(`Page ${page} of ${data?.pagination?.pages}`);
-      console.log(data?.pagination);
+    getCatalog(itemsPerPage, currentPage, itemsPerPage)
+      .then(({ error, data }) => {
+        if (!error) {
+          dispatch(setPage(currentPage));
+          dispatch(setPages(data?.pagination?.pages || 0));
+          dispatch(setItems(data?.list || []));
+          dispatch(setError(error));
+        }
 
-      if (error) dispatch(setError(error));
-      if (!error) dispatch(setItems(data?.list || []));
-      dispatch(setIsLoad(true));
-    });
-  }, [dispatch, itemsPerPage, page]);
+        dispatch(setIsLoad(true));
+      })
+      .catch(() => {
+        dispatch(setIsLoad(false));
+        setTimeout(() => {
+          location.reload();
+        }, 3000);
+      });
+  }, [currentPage, dispatch, itemsPerPage]);
 
   useEffect(() => {
     dispatch(setPage(currentPage));
-    update();
-  }, [currentPage, dispatch, update]);
+    fetchDataFromApi();
+  }, [currentPage, dispatch, fetchDataFromApi, page]);
 
   return (
-    <div>
-      {items.map((release) => (
-        <img key={release.id} src={`https://static.wwnd.space/${release.posters?.original?.url as string}`} />
-      ))}
+    <div className={cn('catalog-viewer')}>
+      <CatalogViewerPagination currentPage={page} countOfPages={pages} />
+
+      <div className={cn('catalog-viewer__grid-container')}>
+        {items.map((release) => (
+          <CatalogViewerPosterItem
+            key={release.code}
+            code={release.code}
+            image={release.posters?.original?.url as string}
+            alt={release.names?.en}
+          />
+        ))}
+      </div>
+
+      <CatalogViewerPagination currentPage={page} countOfPages={pages} />
     </div>
   );
 };

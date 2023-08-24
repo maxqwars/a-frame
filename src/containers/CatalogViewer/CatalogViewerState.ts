@@ -7,6 +7,7 @@ type CatalogViewType = {
   items: Objects.Title[];
   isLoaded: boolean;
   error: METAFORM_ERROR | null;
+  pages: number;
 };
 
 const initialState = {
@@ -14,6 +15,7 @@ const initialState = {
   items: [],
   isLoaded: false,
   error: null,
+  pages: 0,
 } as CatalogViewType;
 
 const catalogViewerState = createSlice({
@@ -32,8 +34,11 @@ const catalogViewerState = createSlice({
     setError(state: CatalogViewType, action: PayloadAction<METAFORM_ERROR | null>) {
       state.error = action.payload;
     },
+    setPages(state: CatalogViewType, action: PayloadAction<number>) {
+      state.pages = action.payload;
+    },
   },
 });
 
-export const { setPage, setItems, setIsLoad, setError } = catalogViewerState.actions;
+export const { setPage, setItems, setIsLoad, setError, setPages } = catalogViewerState.actions;
 export default catalogViewerState.reducer;
