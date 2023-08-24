@@ -1,0 +1,65 @@
+.posters-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.posters-grid__poster-wrapper {
+  width: 170px;
+  padding: 10px;
+  display: block;
+  height: auto;
+}
+
+@media (width <= 576px) {
+  .posters-grid__poster-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+  }
+}
+
+@media (576px <= width <= 768px) {
+  .posters-grid__poster-wrapper {
+    width: 170px;
+    height: auto;
+    padding: 5px;
+  }
+}
+
+@media (768px <= width <= 992px) {
+  .posters-grid__poster-wrapper {
+    width: 138px;
+    height: auto;
+    padding: 3px;
+  }
+}
+
+@media (992px <= width <= 1200px) {
+  .posters-grid__poster-wrapper {
+    width: 100px;
+    height: auto;
+    padding: 3px;
+  }
+}
+
+@media (1200px <= width <= 1400px) {
+  .posters-grid__poster-wrapper {
+    width: 142px;
+    height: auto;
+    padding: 10px;
+  }
+}
+
+.posters-grid__poster-image {
+  border-radius: var(--shape-medium);
+  height: inherit;
+  width: inherit;
+  cursor: pointer;
+}
+
+.posters-grid__poster-image_light {
+  box-shadow: var(--shadow-small);
+}

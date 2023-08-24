@@ -2,41 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* align-items: center; */
-}
-
-.catalog-viewer__grid-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.catalog-viewer__poster-wrapper {
-  display: block;
-  width: 10vw;
-  height: 13vh;
-  padding: 10px;
-  height: auto;
-}
-
-@media (width <= 768px) {
-  .catalog-viewer__poster-wrapper {
-    width: 44vw;
-    padding: 3px;
-  }
-}
-
-.catalog-viewer__poster-image {
-  border-radius: var(--shape-medium);
-  height: inherit;
-  width: inherit;
-  cursor: pointer;
-}
-
-.catalog-viewer__poster-image_light {
-  box-shadow: var(--shadow-small);
 }
 
 .catalog-viewer__pagination-wrapper {

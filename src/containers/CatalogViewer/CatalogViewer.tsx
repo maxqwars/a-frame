@@ -2,7 +2,7 @@ import { useEffect, useCallback } from 'react';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { setPage, setItems, setError, setIsLoad } from './';
 import { getCatalog } from '@/api/getCatalog';
-import CatalogViewerPosterItem from './CatalogViewerPosterItem';
+import { PostersGrid } from '@/components/PostersGrid';
 import CatalogViewerPagination from './CatalogViewerPagination';
 
 import cn from 'classnames';
@@ -51,16 +51,7 @@ const CatalogViewer = ({ currentPage, itemsPerPage }: CatalogViewerProps) => {
     <div className={cn('catalog-viewer')}>
       <CatalogViewerPagination currentPage={page} countOfPages={pages} />
 
-      <div className={cn('catalog-viewer__grid-container')}>
-        {items.map((release) => (
-          <CatalogViewerPosterItem
-            key={release.code}
-            code={release.code}
-            image={release.posters?.original?.url as string}
-            alt={release.names?.en}
-          />
-        ))}
-      </div>
+      <PostersGrid items={items} />
 
       <CatalogViewerPagination currentPage={page} countOfPages={pages} />
     </div>

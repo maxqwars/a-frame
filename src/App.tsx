@@ -9,43 +9,43 @@ import { useAppSelector } from '@/store/hooks';
 import { ThemeContext } from '@/context/ThemeContext';
 
 /* Views */
-import HomeView from '@/views/HomeView';
-import DebugView from '@/views/DebugView';
-import SettingsView from '@/views/SettingsView';
-import BookmarksView from '@/views/BookmarksView';
-import CatalogView from '@/views/CatalogView';
-import SearchView from '@/views/SearchView';
-import ReleaseView from '@/views/ReleaseView';
+import HomePage from '@/pages/HomePage';
+import DebugPage from '@/pages/DebugPage';
+import SettingsPage from '@/pages/SettingsPage';
+import BookmarksPage from '@/pages/BookmarksPage';
+import CatalogPage from '@/pages/CatalogPage';
+import SearchPage from '@/pages/SearchPage';
+import ReleasePage from '@/pages/ReleasePage';
 
 /* Create router */
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomeView />,
+    element: <HomePage />,
   },
   {
     path: '/debug',
-    element: <DebugView />,
+    element: <DebugPage />,
   },
   {
     path: '/settings',
-    element: <SettingsView />,
+    element: <SettingsPage />,
   },
   {
     path: '/bookmarks',
-    element: <BookmarksView />,
+    element: <BookmarksPage />,
   },
   {
     path: '/catalog',
-    element: <CatalogView />,
+    element: <CatalogPage />,
   },
   {
     path: '/release/:code',
-    element: <ReleaseView />,
+    element: <ReleasePage />,
   },
   {
     path: '/search',
-    element: <SearchView />,
+    element: <SearchPage />,
   },
 ]);
 
