@@ -2,7 +2,17 @@
 
 # Mizuhiki
 
+
 Mizuhiki - Open Source & modern AniLibria API web client.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/371bfbd2-e3d3-4fcd-aca7-8d26832b41a1/deploy-status)](https://app.netlify.com/sites/mizuhiki/deploys)
+![](https://img.shields.io/github/issues/maxqwars/mizuhiki)
+![](https://img.shields.io/github/forks/maxqwars/mizuhiki)
+![](https://img.shields.io/github/stars/maxqwars/mizuhiki)
+![](https://img.shields.io/github/license/maxqwars/mizuhiki)
+![](https://img.shields.io/github/release-date/maxqwars/mizuhiki)
+![](https://img.shields.io/github/contributors/maxqwars/mizuhiki)
+![](https://img.shields.io/github/package-json/v/maxqwars/mizuhiki)
 
 ![](.github/images/chrome.png)
 
