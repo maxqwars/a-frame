@@ -18,7 +18,9 @@ const SettingsView = () => {
     <CommonPageLayout>
       <Section>
         <Container>
-          <Typography>🚧 Under construct</Typography>
+          <Typography variant='h4' align='center'>Common</Typography>
+
+          <Typography variant='h4' align='center'>About</Typography>
         </Container>
       </Section>
     </CommonPageLayout>

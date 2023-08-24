@@ -30,7 +30,7 @@ const HomeView = () => {
               {t('recent_updates_heading')}
             </Typography>
 
-            <RecentUpdatesCarousel />
+            {/* <RecentUpdatesCarousel /> */}
           </Container>
         </Section>
 
