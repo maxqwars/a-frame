@@ -4,6 +4,7 @@ import cn from 'classnames';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { setCurrentCode, setLoaded, setRelease } from '.';
 import { Typography } from '@/components/Typography';
+import { PosterImage } from '@/components/PosterImage';
 import ApiModel from '@/models/APIModel';
 import DisplayReleaseSection from './DisplayReleaseSection';
 
@@ -58,7 +59,7 @@ const DisplayRelease = ({ code }: DisplayReleaseProps) => {
   return (
     <div className="display-release">
       <div className={cn('display-release__short')}>
-        <img className={cn('display-release__poster-image')} src={releaseData?.posterImageUrl} alt="" />
+        <PosterImage className={cn('display-release__poster-image')} src={releaseData?.posterImageUrl || ''} alt="" />
       </div>
 
       <div className={cn('display-release__common')}>
