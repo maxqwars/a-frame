@@ -1,18 +1,32 @@
 import cn from 'classnames';
-import { useContext } from 'react';
+import { ChangeEvent, FormEvent, useContext, useState } from 'react';
 import { Search } from 'react-feather';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 import { ThemeContext } from '@/context/ThemeContext';
 
 const NavbarSearch = () => {
+  const navigate = useNavigate();
   const theme = useContext(ThemeContext);
   const { t } = useTranslation('Navbar'); // WARN: This component use useTranslation()
+  const [query, setQuery] = useState<string>('');
+
+  const onSearchInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setQuery(event.target.value);
+  };
+
+  const onFormSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    navigate(`/search?query=${query}`);
+  };
 
   return (
     <div className={cn('navbar__search')}>
-      <form action="" className={cn('navbar__search-form')}>
+      <form onSubmit={onFormSubmit} className={cn('navbar__search-form')}>
         <input
+          value={query}
+          onChange={onSearchInputChange}
           placeholder={t('search_placeholder')}
           className={cn('navbar__search-input', {
             [`navbar__search-input_${theme}`]: theme,
