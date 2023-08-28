@@ -6,6 +6,7 @@ import { Container } from '@/components/Container';
 import { Section } from '@/components/Section';
 import { Typography } from '@/components/Typography';
 import { CommonPageLayout } from '@/layout';
+import { LoadSpinner } from '@/components/LoadSpinner';
 
 const SettingsPage = () => {
   const { setDocumentTitle } = useBrowserControls();
@@ -18,6 +19,8 @@ const SettingsPage = () => {
     <CommonPageLayout>
       <Section>
         <Container>
+          <LoadSpinner></LoadSpinner>
+
           <Typography variant="h4" align="center">
             Common
           </Typography>
