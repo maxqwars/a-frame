@@ -9,3 +9,11 @@ export async function catalogReader(limit: number, page: number, itemsPerPage: n
 export async function search(query: string) {
   return await api.getTitleSearch({ search: query });
 }
+
+export async function recentUpdates() {
+  return await api.getTitleUpdates({ filter: ['code', 'posters', 'id', 'name'] });
+}
+
+export async function getRelease(code: string) {
+  return await api.getTitle({ code });
+}

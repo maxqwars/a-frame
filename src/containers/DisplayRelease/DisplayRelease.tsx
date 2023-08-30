@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { setCurrentCode, setLoaded, setRelease } from '.';
 import { Typography } from '@/components/Typography';
 import { PosterImage } from '@/components/PosterImage';
-import ApiModel from '@/models/APIModel';
+import { getRelease } from '@/api/anilibria';
 import DisplayReleaseSection from './DisplayReleaseSection';
 
 import './DisplayRelease.css';
@@ -20,16 +20,16 @@ const DisplayRelease = ({ code }: DisplayReleaseProps) => {
 
   /* Define update data callback */
   const update = useCallback(() => {
-    ApiModel.getReleaseByCode(code).then((release) => {
+    getRelease(code).then((response) => {
       dispatch(
         setRelease({
-          code: release.code || '',
-          name: release.names?.ru || '',
-          desc: release.description || '',
-          genres: release.genres || '',
-          inFavorites: release.in_favorites || 0,
-          changedAt: release.last_change || 0,
-          posterImageUrl: release.posters?.original?.url as string,
+          code: response.data?.code || '',
+          name: response.data?.names?.ru || '',
+          desc: response.data?.description || '',
+          genres: response.data?.genres || '',
+          inFavorites: response.data?.in_favorites || 0,
+          changedAt: response.data?.last_change || 0,
+          posterImageUrl: response.data?.posters?.original?.url as string,
         }),
       );
 
