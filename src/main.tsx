@@ -6,18 +6,19 @@ import { Provider } from 'react-redux';
 import App from './App.tsx';
 import initI18n from '@/i18n';
 import store from '@/store/store';
-import { appConfigModel } from '@/models/AppConfigModel';
-import { setConfig } from '@/store/slices/AppConfig.ts';
+import { appModel } from '@/models/AppModel/AppModel.ts';
+import { appActions } from '@/models/AppModel/slice.ts';
 
 import './main.css';
 
 /* Set language */
-const i18n = initI18n(
-  appConfigModel.language === 'system' ? undefined : (appConfigModel.userSelectedLanguage as string),
-);
+const i18n = initI18n(appModel.language === 'auto' ? undefined : (appModel.customLanguage as string));
 
-/* Set config */
-store.dispatch(setConfig(appConfigModel.raw()));
+function init() {
+  store.dispatch(appActions.setAll(appModel.config));
+}
+
+init();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
