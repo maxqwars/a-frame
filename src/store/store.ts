@@ -6,6 +6,7 @@ import { recentUpdatesCarouselReducer } from '@/containers/RecentUpdatesCarousel
 import { displayReleaseReducer } from '@/containers/DisplayRelease';
 import { catalogViewerReducer } from '@/containers/CatalogViewer';
 import { releaseViewerReducer } from '@/containers/ReleaseViewer';
+import { searchViewerReducer } from '@/containers/SearchViewer';
 
 /* Configure store */
 const store = configureStore({
@@ -15,6 +16,7 @@ const store = configureStore({
     displayReleaseReducer,
     catalogViewerReducer,
     releaseViewerReducer,
+    searchViewier: searchViewerReducer,
   },
   devTools: true,
 });

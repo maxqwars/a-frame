@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@maxqwars/metaform": "^1.0.8",
+    "@maxqwars/metaform": "^1.0.9",
     "@reduxjs/toolkit": "^1.9.5",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.9",
