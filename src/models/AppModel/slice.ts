@@ -35,7 +35,23 @@ const appSlice = createSlice({
       state.customStaticServerUrl = action.payload;
     },
     setAll: (state: IApp, action: PayloadAction<IApp>) => {
-      state = action.payload;
+      const {
+        theme,
+        language,
+        apiServerUrl,
+        staticServerUrl,
+        customApiServerUrl,
+        customLanguage,
+        customStaticServerUrl,
+      } = action.payload;
+
+      state.theme = theme;
+      state.language = language;
+      state.apiServerUrl = apiServerUrl;
+      state.staticServerUrl = staticServerUrl;
+      state.customApiServerUrl = customApiServerUrl;
+      state.customLanguage = customLanguage;
+      state.customStaticServerUrl = customStaticServerUrl;
     },
   },
 });

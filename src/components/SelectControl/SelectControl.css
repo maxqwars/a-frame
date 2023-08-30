@@ -1,47 +1,23 @@
-/* TODO: Implement SelectControl */
-
-/* .select-control {
+.select-control {
   display: flex;
-  width: 100%;
-  height: 64px;
-  margin: 10px 0px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: 32px;
+  padding: 5px 0px 5px 5px;
   border-radius: var(--shape-medium);
+  margin: 10px 0;
 }
 
-.select-control select {
-  display: none;
+.react-select-container {
+
 }
 
-.select-control_light {
-  background: var(--light-background-color-darker-900);
-}
+.react-select__control {}
 
-.select-control_select-container {
-}
+.react-select__value-container {}
 
-.select-control_select-selector {
-  width: 100%;
-  min-width: 15ch;
-  max-width: 30ch;
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  padding: 0 1em 0 0;
-  margin: 0;
-  width: 100%;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: inherit;
-  line-height: inherit;
-  border-radius: var(--shape-medium);
+.react-select__indicators {
+  
 }
-
-.select-control_select-selector_light {
-  border: 1px solid var(--light-background-color-darker-800);
-}
-
-.select-control__label {
-  display: block;
-  font-family: var(--typography-font-family);
-  font-size: var(--typography-headline-4);
-} */

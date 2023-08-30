@@ -70,6 +70,8 @@ class AppModel implements IAppModel {
   constructor() {
     const conf = this._read();
 
+    console.log(conf)
+
     if (conf) {
       this._config = conf;
     } else {
