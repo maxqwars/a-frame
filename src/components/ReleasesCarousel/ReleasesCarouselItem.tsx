@@ -20,7 +20,7 @@ const ReleasesCarouselItem = ({ data }: ReleasesCarouselItemProps) => {
         navigate(`/release/${data.code}`);
       }}
     >
-      <PosterImage className={cn('release-carousel__image')} src={data.imageUrl} alt={data.name} />
+      <PosterImage className={cn('release-carousel__image')} assetId={data.imageUrl as string} alt={data.name} />
     </div>
   );
 };

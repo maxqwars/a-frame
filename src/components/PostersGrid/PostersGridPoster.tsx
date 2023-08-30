@@ -22,7 +22,7 @@ const PostersGridPoster = ({ image, alt, code }: PostersGridPosterProps) => {
         className={cn('posters-grid__poster-image', {
           [`posters-grid__poster-image_${theme}`]: theme,
         })}
-        src={`https://static.wwnd.space/${image}`}
+        assetId={image as string}
         alt={alt || ''}
       />
     </div>

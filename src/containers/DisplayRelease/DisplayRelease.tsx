@@ -29,7 +29,7 @@ const DisplayRelease = ({ code }: DisplayReleaseProps) => {
           genres: release.genres || '',
           inFavorites: release.in_favorites || 0,
           changedAt: release.last_change || 0,
-          posterImageUrl: `https://static.wwnd.space${release.posters?.original?.url as string}`,
+          posterImageUrl: release.posters?.original?.url as string,
         }),
       );
 
@@ -59,7 +59,11 @@ const DisplayRelease = ({ code }: DisplayReleaseProps) => {
   return (
     <div className="display-release">
       <div className={cn('display-release__short')}>
-        <PosterImage className={cn('display-release__poster-image')} src={releaseData?.posterImageUrl || ''} alt="" />
+        <PosterImage
+          className={cn('display-release__poster-image')}
+          assetId={releaseData?.posterImageUrl as string}
+          alt=""
+        />
       </div>
 
       <div className={cn('display-release__common')}>
