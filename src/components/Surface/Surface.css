@@ -1,0 +1,37 @@
+.surface {
+  width: auto;
+  height: auto;
+  margin: 5px;
+}
+
+.surface_variant-light {
+  background-color: var(--light-background-color-darker-900);
+}
+
+.surface_variant-dark {
+  background-color: var(--dark-background-color-lighter-900);
+}
+
+.surface_shape-small {
+  border-radius: var(--shape-small);
+}
+
+.surface_shape-medium {
+  border-radius: var(--shape-medium);
+}
+
+.surface_shape-heavy {
+  border-radius: var(--shape-heavy);
+}
+
+.surface_padding-0 {
+  padding: 0;
+}
+
+surface_padding-5 {
+  padding: 5px;
+}
+
+.surface_padding-10 {
+  padding: 10px;
+}
