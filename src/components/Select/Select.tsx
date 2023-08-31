@@ -5,7 +5,7 @@ import { ThemeContext } from '@/context/ThemeContext';
 import { ChevronDown } from 'react-feather';
 import SelectOption from './SelectOption';
 
-import './Select.css'
+import './Select.css';
 
 export type Option = {
   label: string;
@@ -16,22 +16,12 @@ type SelectProps = {
   selected: Option | null;
   options: Option[];
   placeholder?: string;
-  mode?: 'rows' | 'cells';
-  status?: 'default' | 'invalid';
   // eslint-disable-next-line no-unused-vars
   onChange?: (selected: Option['value']) => void;
   onClose?: () => void;
 };
 
-const Select = ({
-  selected,
-  options,
-  placeholder,
-  mode = 'rows',
-  status = 'default',
-  onChange,
-  onClose,
-}: SelectProps) => {
+const Select = ({ selected, options, placeholder, onChange, onClose }: SelectProps) => {
   const theme = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -79,18 +69,12 @@ const Select = ({
   };
 
   return (
-    <div
-      className={cn('app-select', { [`app-select_${theme}`]: theme })}
-      ref={rootRef}
-      data-is-active={isOpen}
-      data-mode={mode}
-    >
+    <div className={cn('app-select', { [`app-select_${theme}`]: theme })} ref={rootRef} data-is-active={isOpen}>
       <div className={cn('app-select__arrow', { [`app-select__arrow_${theme}`]: theme })}>
         <ChevronDown />
       </div>
       <div
         className={cn('app-select__placeholder', { [`app-select__placeholder_${theme}`]: theme })}
-        data-status={status}
         data-selected={!!selected?.value}
         onClick={handlePlaceHolderClick}
         role="button"
